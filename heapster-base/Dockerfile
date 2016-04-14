@@ -40,9 +40,9 @@ RUN yum install -y -q go git wget make && \
     export PATH=$PATH:$GOPATH/bin && \
     mkdir -p $GOPATH/src/k8s.io && \
     cd $GOPATH/src/k8s.io && \
-    git clone https://github.com/kubernetes/heapster && \
+    git clone https://github.com/DafuSHI/heapster.git && \
     cd heapster && \
-    git checkout $HEAPSTER_COMMIT && \
+    git checkout hw-ES-sink && \
     make && \
     cp heapster /opt && \
     rm -rf $GOPATH && \

@@ -58,6 +58,8 @@ objects:
           value: ${MASTER_URL}
         - name: REDEPLOY
           value: ${REDEPLOY}
+        - name: ELASTIC_URL
+          value: ${ELASTIC_URLS}
         - name: HEAPSTER_STANDALONE
           value: "true"
         - name: IGNORE_PREFLIGHT
@@ -76,6 +78,10 @@ parameters:
   description: 'Specify prefix for metrics components; e.g. for "openshift/origin-metrics-deployer:v1.1", set prefix "openshift/origin-"'
   name: IMAGE_PREFIX
   value: "openshift/origin-"
+
+ description: 'URL for Elasticsearch'
+  name: ELASTIC_URL
+  value: "http://elasticsearch-forge-dev.dev.forge.paas.gemalto.com:80"
 -
   description: 'Specify version for metrics components; e.g. for "openshift/origin-metrics-deployer:v1.1", set version "v1.1"'
   name: IMAGE_VERSION
