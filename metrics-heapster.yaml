@@ -78,8 +78,8 @@ parameters:
   description: 'Specify prefix for metrics components; e.g. for "openshift/origin-metrics-deployer:v1.1", set prefix "openshift/origin-"'
   name: IMAGE_PREFIX
   value: "openshift/origin-"
-
- description: 'URL for Elasticsearch'
+-
+  description: 'URL for Elasticsearch'
   name: ELASTIC_URL
   value: "http://elasticsearch-forge-dev.dev.forge.paas.gemalto.com:80"
 -
