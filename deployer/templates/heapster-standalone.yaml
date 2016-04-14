@@ -11,6 +11,9 @@ parameters:
 - description: Internal URL for the master, for authentication retrieval
   name: MASTER_URL
   value: https://kubernetes.default.svc:443
+- description:  URL for ES
+  name: ELASTIC_URL
+  value: http://elasticsearch-forge-dev.dev.forge.paas.gemalto.com:80
 - description: Specify prefix for metrics components; e.g. for "openshift/origin-metrics-deployer:v1.1",
     set prefix "openshift/origin-"
   name: IMAGE_PREFIX
@@ -69,6 +72,7 @@ objects:
           - "heapster-wrapper.sh"
           - "--wrapper.allowed_users_file=/secrets/heapster.allowed-users"
           - "--source=kubernetes:${MASTER_URL}?useServiceAccount=true&kubeletHttps=true&kubeletPort=10250"
+          - "--sink=elasticsearch:?nodes=${ELASTIC_URL}"
           - "--tls_cert=/secrets/heapster.cert"
           - "--tls_key=/secrets/heapster.key"
           - "--tls_client_ca=/secrets/heapster.client-ca"
