@@ -26,6 +26,8 @@ EXPOSE 8082
 #Commit for version unreleased v1.1.0-beta1 (SNAPSHOT)
 ENV HEAPSTER_COMMIT=de510e4
 
+RUN echo "proxy=http://proxy-fr-croissy.gemalto.com:8080" >> /etc/yum.conf
+
 RUN yum install -y -q go git wget make && \
     yum clean all && \
     cd /tmp && \
