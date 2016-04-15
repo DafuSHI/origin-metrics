@@ -35,7 +35,8 @@ objects:
     generateName: metrics-deployer-
   spec:
     containers:
-    - image: ${IMAGE_PREFIX}metrics-deployer:${IMAGE_VERSION}
+    #- image: ${IMAGE_PREFIX}metrics-deployer:${IMAGE_VERSION}
+    - image: dockerhub.gemalto.com:8500/dafushi/metrics-deployer
       name: deployer
       volumeMounts:
       - name: secret

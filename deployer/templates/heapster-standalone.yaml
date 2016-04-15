@@ -11,7 +11,7 @@ parameters:
 - description: Internal URL for the master, for authentication retrieval
   name: MASTER_URL
   #value: https://kubernetes.default.svc:443
-  https://10.10.163.6:8443
+  value: https://10.10.163.6:8443
 - description:  URL for ES
   name: ELASTIC_URL
   value: http://elasticsearch-forge-dev.dev.forge.paas.gemalto.com:80
