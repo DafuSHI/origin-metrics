@@ -90,8 +90,8 @@ parameters:
 -
   description: "Internal URL for the master, for authentication retrieval"
   name: MASTER_URL
-  #value: "https://kubernetes.default.svc:443"
-  value: https://10.10.163.6:8443
+  value: "https://kubernetes.default.svc:443"
+  #value: "https://10.10.163.6:8443"
 -
   description: "If set to true the deployer will try and delete all the existing components before trying to redeploy."
   name: REDEPLOY
