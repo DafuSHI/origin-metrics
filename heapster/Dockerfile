@@ -16,7 +16,7 @@
 #
 
 # Heapster Docker Image
-FROM dockerhub.gemalto.com:8500/dafushi/heapster
+FROM dockerhub.gemalto.com:8500/dafushi/heapster_base
 
 # The image is maintained by the Hawkular Metrics team
 MAINTAINER Hawkular Metrics <hawkular-dev@lists.jboss.org>
@@ -27,3 +27,5 @@ ADD heapster-wrapper.sh \
     /opt/
 
 ENTRYPOINT ["opt/heapster-wrapper.sh"]
+
+# Generate dockerhub.gemalto.com:8500/dafushi/heapster

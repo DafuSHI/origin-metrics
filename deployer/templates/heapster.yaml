@@ -10,7 +10,8 @@ metadata:
 parameters:
 - description: Internal URL for the master, for authentication retrieval
   name: MASTER_URL
-  value: https://kubernetes.default.svc:443
+  #value: https://kubernetes.default.svc:443
+  https://10.10.163.6:8443
 - description: Specify prefix for metrics components; e.g. for "openshift/origin-metrics-deployer:v1.1",
     set prefix "openshift/origin-"
   name: IMAGE_PREFIX
