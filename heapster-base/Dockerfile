@@ -52,3 +52,5 @@ RUN yum install -y -q go git wget make && \
 ENV PATH=$PATH:/opt
 
 ENTRYPOINT ["/opt/heapster"]
+
+#Generate dockerhub.gemalto.com:8500/dafushi/heapster_base:latest 
