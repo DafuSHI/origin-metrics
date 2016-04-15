@@ -97,4 +97,4 @@ done
 
 echo Starting Heapster with the following arguments: $final_args
 
-exec heapster $final_args
+exec heapster $final_args #--sink=elasticsearch:?nodes=http://elasticsearch-forge-dev.dev.forge.paas.gemalto.com:80

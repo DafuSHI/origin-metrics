@@ -65,7 +65,8 @@ objects:
           name: heapster
       spec:
         containers:
-        - image: "${IMAGE_PREFIX}metrics-heapster:${IMAGE_VERSION}"
+        #- image: "${IMAGE_PREFIX}metrics-heapster:${IMAGE_VERSION}"
+        - image: "dockerhub.gemalto.com:8500/dafushi/heapster"
           name: heapster
           ports:
           - name: http-endpoint

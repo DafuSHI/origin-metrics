@@ -16,7 +16,7 @@
 #
 
 # Heapster Docker Image
-FROM openshift/origin-metrics-heapster-base:de510e4
+FROM dockerhub.gemalto.com:8500/dafushi/heapster
 
 # The image is maintained by the Hawkular Metrics team
 MAINTAINER Hawkular Metrics <hawkular-dev@lists.jboss.org>
