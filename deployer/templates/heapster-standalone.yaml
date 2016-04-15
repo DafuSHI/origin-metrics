@@ -1,4 +1,4 @@
- id: heapster-standalone
+id: heapster-standalone
 kind: Template
 apiVersion: v1
 name: Heapster Standalone Template
