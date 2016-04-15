@@ -1,4 +1,4 @@
-id: heapster-standalone
+ id: heapster-standalone
 kind: Template
 apiVersion: v1
 name: Heapster Standalone Template
@@ -75,6 +75,7 @@ objects:
           - "--wrapper.allowed_users_file=/secrets/heapster.allowed-users"
           - "--source=kubernetes:${MASTER_URL}?useServiceAccount=true&kubeletHttps=true&kubeletPort=10250"
           - "--sink=elasticsearch:?nodes=${ELASTIC_URL}"
+          - "-v 10"
           - "--tls_cert=/secrets/heapster.cert"
           - "--tls_key=/secrets/heapster.key"
           - "--tls_client_ca=/secrets/heapster.client-ca"
